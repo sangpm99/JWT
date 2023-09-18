@@ -255,7 +255,9 @@ public class JwtAuthenticationEntryPoint implements AuthenticationEntryPoint {
 
 ### Tạo file config JWT
 Lớp này sẽ thực hiện việc định nghĩa các chữ ký, tạo khóa, ...
+<br>
 Tạo file <code>.../security/JwtHelper.java</code>:
+
 ```java
 package com.jwt.example.JWTExample.security;
 
