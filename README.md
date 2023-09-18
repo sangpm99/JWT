@@ -335,6 +335,7 @@ Lớp này xử lý 5 yêu cầu quan trọng
 - Cài đặt xác thực
 <br>
 Tạo file <code>.../security/JwtAuthenticationFilter.java</code>:
+
 ```java
 package com.jwt.example.JWTExample.security;
 
@@ -420,6 +421,7 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
 
 ### Tạo SecurityConfig
 Tạo file <code>.../config/SecurityConfig.java</code>:
+
 ```java
 package com.jwt.example.JWTExample.config;
 
@@ -458,6 +460,7 @@ public class SecurityConfig {
 
 ### Tạo JwtRequest
 Tạo file <code>.../models/JwtRequest.java</code>:
+
 ```java
 package com.jwt.example.JWTExample.models;
 
@@ -478,6 +481,7 @@ public class JwtRequest {
 
 ### Tạo JwtResponse
 Tạo file <code>.../models/JwtResponse.java</code>:
+
 ```java
 package com.jwt.example.JWTExample.models;
 
@@ -498,6 +502,7 @@ public class JwtResponse {
 
 ### Tạo controller AuthController
 Tạo file <code>.../controller/AuthController.java</code>:
+
 ```java
 package com.jwt.example.JWTExample.controller;
 
@@ -580,6 +585,7 @@ Phương thức: <code>POST</code>
 <br>
 Body: <code>raw</code>, <code>JSON</code>:
 <br>
+
 ```json
 {
     "email": "admin",
@@ -588,6 +594,7 @@ Body: <code>raw</code>, <code>JSON</code>:
 ```
 Kết quả:
 - jwtToken sẽ chỉ khả dụng trong vòng 5h (xem file <code>JwtHelper.java</code>) kể từ khi được tạo
+
 ```json
 {
   "jwtToken": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTY5NTAwOTA2MCwiZXhwIjoxNjk1MDI3MDYwfQ.qxHkYWVaqyYyyb7ruhYCUx1vNcis3PREA-paLPgaAAhbPskAjiGKt9HTVXXIorhPItUmzAzLjfzRR74arsAUhw",
@@ -618,6 +625,7 @@ Bearer token hay gọi là Bearer authentication chính là token authentication
 </table>
 
 Kết quả:
+
 ```json
 [
   {
@@ -665,6 +673,7 @@ Header:
 </table>
 
 Kết quả:
+
 ```text
 admin
 ```
