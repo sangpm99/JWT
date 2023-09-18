@@ -551,7 +551,67 @@ public class AuthController {
 
 ```
 
-### Tạo model User
-Tạo file <code>.../models/User.java</code>:
-```java
+# Test trên Postman:
+## Test chức năng đăng nhập
+Địa chỉ: http://localhost:8081/auth/login
+<br>
+Phương thức: <code>POST</code>
+<br>
+Body: <code>raw</code>, <code>JSON</code>:
+<br>
+```json
+{
+    "email": "admin",
+    "password": "abc"
+}
+```
+Kết quả:
+- jwtToken sẽ chỉ khả dụng trong vòng 5h (xem file <code>JwtHelper.java</code>) kể từ khi được tạo
+```json
+{
+  "jwtToken": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTY5NTAwOTA2MCwiZXhwIjoxNjk1MDI3MDYwfQ.qxHkYWVaqyYyyb7ruhYCUx1vNcis3PREA-paLPgaAAhbPskAjiGKt9HTVXXIorhPItUmzAzLjfzRR74arsAUhw",
+  "username": "admin"
+}
+```
+
+## Test chức năng lấy tất cả người dùng
+Địa chỉ: http://localhost:8081/home/users
+<br>
+Phương thức: <code>GET</code>
+<br>
+Header:
+- Key: <code>Authorization</code>
+- Value: <code>Bearer</code> eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTY5NTAwOTA2MCwiZXhwIjoxNjk1MDI3MDYwfQ.qxHkYWVaqyYyyb7ruhYCUx1vNcis3PREA-paLPgaAAhbPskAjiGKt9HTVXXIorhPItUmzAzLjfzRR74arsAUhw
+<br>
+
+```markdown
+| Key | Value |
+|----------|----------|
+|Authorization|Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTY5NTAwOTA2MCwiZXhwIjoxNjk1MDI3MDYwfQ.qxHkYWVaqyYyyb7ruhYCUx1vNcis3PREA-paLPgaAAhbPskAjiGKt9HTVXXIorhPItUmzAzLjfzRR74arsAUhw|
+
+```
+Kết quả:
+```json
+[
+  {
+    "userId": "815a6fee-9478-494f-be1b-56742e96ffb5",
+    "name": "User Name 1",
+    "email": "username1@gmail.com"
+  },
+  {
+    "userId": "6ffaae38-8c74-4646-ba62-7638ee0166a4",
+    "name": "User Name 2",
+    "email": "username2@gmail.com"
+  },
+  {
+    "userId": "1cadb419-a6d3-4538-abd9-2fa9e205e28d",
+    "name": "User Name 3",
+    "email": "username3@gmail.com"
+  },
+  {
+    "userId": "611b7460-5077-4084-8d99-a9cf15429a73",
+    "name": "User Name 4",
+    "email": "username4@gmail.com"
+  }
+]
 ```
