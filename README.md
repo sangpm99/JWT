@@ -1,5 +1,5 @@
 #JWT Example
 
 ## Cài đặt
-``bash``
+```bash
 git clone https://github.com/sangpm99/JWT.git
