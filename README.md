@@ -553,6 +553,7 @@ public class AuthController {
 
 # Test trên Postman:
 Lưu ý:
+- Các jwtToken ví dụ dưới đây chỉ đúng với bài mẫu, hãy thay thế bằng jwtToken của bạn
 - Địa chỉ có thể khác, phụ thuộc vào file <code>controller</code> và <code>application.properties</code> bạn đặt
 - Có thể test trên trình duyệt nhưng phải ẩn file <code>JwtAuthenticationEntryPoint</code> và <code>SecurityConfig</code>, tuy nhiên không khuyến nghị
 ## Test chức năng đăng nhập
