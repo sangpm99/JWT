@@ -584,6 +584,7 @@ Header:
 - Value: <code>Bearer</code> eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTY5NTAwOTA2MCwiZXhwIjoxNjk1MDI3MDYwfQ.qxHkYWVaqyYyyb7ruhYCUx1vNcis3PREA-paLPgaAAhbPskAjiGKt9HTVXXIorhPItUmzAzLjfzRR74arsAUhw
 <br>
 Bearer token hay gọi là Bearer authentication chính là token authentication. Là một HTTP authentication scheme liên quan đến các token bảo mật thì nó gọi là bearer tokens.
+<br />
 ```html
 <table>
     <tr>
@@ -603,6 +604,7 @@ Bearer token hay gọi là Bearer authentication chính là token authentication
     </tr>
 </table>
 ```
+
 Kết quả:
 ```json
 [
