@@ -88,7 +88,10 @@ server.port=8081
 ```
 
 ### Tạo các folder tại <code>src/main/java/com/jwt/example/JWTExample</code>: <code>config</code>, <code>controller</code>, <code>models</code>, <code>security</code>, <code>service</code>
+### Tạo file controller
 
+Các địa chỉ điều hướng sẽ nằm tại phần này
+<br>
 Tạo file <code>.../controller/HomeController.java</code>:
 ```java
 package com.jwt.example.JWTExample.controller;
@@ -149,7 +152,7 @@ public class User {
 ```
 
 ### Tạo Service
-Tạo các User <code>UserService()</code>
+Tạo các User <code>UserService()</code>, đây sẽ là dữ liệu người dùng, hiện tại khởi tạo thủ công, có thể thay bằng truy vấn database nếu có
 <br>
 Tạo file <code>.../service/UserService.java</code>:
 ```java
@@ -181,6 +184,8 @@ public class UserService {
 
 ### Tạo AppConfig
 Tạo 2 người dùng với với quyền admin <code>userDetailsService()</code> để đăng nhập
+<br>
+Lúc này có thể truy cập trình duyệt http://localhost:8081 với <code>username</code> và <code>password</code> được khởi tạo bên dưới
 <br>
 Tạo file <code>.../config/AppConfig.java</code>:
 ```java
@@ -220,6 +225,8 @@ public class AppConfig {
 ```
 
 ### Tạo JwtAuthenticationEntryPoint
+Lớp này sẽ ngăn sẽ ngăn truy cập và đưa ra ngoại lệ nếu người dùng chưa xác thực mà thao tác các tác vụ yêu cầu xác thực (lưu ý từ phần này trở đi không test trên trình duyệt được nữa, dùng Postman để test)
+<br>
 Tạo file <code>.../security/JwtAuthenticationEntryPoint.java</code>:
 ```java
 package com.jwt.example.JWTExample.security;
@@ -247,6 +254,7 @@ public class JwtAuthenticationEntryPoint implements AuthenticationEntryPoint {
 ```
 
 ### Tạo file config JWT
+Lớp này sẽ thực hiện việc định nghĩa các chữ ký, tạo khóa, ...
 Tạo file <code>.../security/JwtHelper.java</code>:
 ```java
 package com.jwt.example.JWTExample.security;
@@ -317,6 +325,13 @@ public class JwtHelper {
 ```
 
 ### Tạo JwtAuthenticationFilter
+Lớp này xử lý 5 yêu cầu quan trọng
+- Nhận Token từ request
+- Xác thực Token
+- Nhận tên người dùng từ Token
+- Tải người dùng được liên kết từ Token
+- Cài đặt xác thực
+<br>
 Tạo file <code>.../security/JwtAuthenticationFilter.java</code>:
 ```java
 package com.jwt.example.JWTExample.security;
