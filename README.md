@@ -9,6 +9,6 @@ git clone https://github.com/sangpm99/JWT.git
 # Tạo mới project
 ## Tạo project với maven
 Tạo project bằng cách sử dụng 
-<kbd style="background-color: gray;">
+<code style="background-color: gray;">
 Spring Initializr
-</kbd>
+</code>
