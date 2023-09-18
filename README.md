@@ -83,7 +83,7 @@ Tại file pom.xml thêm các dependence trong mục <code>dependencies</code>
 
 ### Cài đặt cổng (bỏ qua nếu dùng cổng mặc định là 8080)
 Tại file <code>src/main/resources/application.properties</code>:
-```text
+```properties
 server.port=8081
 ```
 
@@ -91,7 +91,7 @@ server.port=8081
 
 ###
 Tạo file <code>.../controller/HomeController.java</code>:
-```text
+```java
 package com.jwt.example.JWTExample.controller;
 
 import com.jwt.example.JWTExample.models.User;
