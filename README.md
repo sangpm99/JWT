@@ -552,6 +552,9 @@ public class AuthController {
 ```
 
 # Test trên Postman:
+Lưu ý:
+- Địa chỉ có thể khác, phụ thuộc vào file <code>controller</code> và <code>application.properties</code> bạn đặt
+- Có thể test trên trình duyệt nhưng phải ẩn file <code>JwtAuthenticationEntryPoint</code> và <code>SecurityConfig</code>, tuy nhiên không khuyến nghị
 ## Test chức năng đăng nhập
 Địa chỉ: http://localhost:8081/auth/login
 <br>
@@ -583,7 +586,7 @@ Header:
 - Key: <code>Authorization</code>
 - Value: <code>Bearer</code> eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTY5NTAwOTA2MCwiZXhwIjoxNjk1MDI3MDYwfQ.qxHkYWVaqyYyyb7ruhYCUx1vNcis3PREA-paLPgaAAhbPskAjiGKt9HTVXXIorhPItUmzAzLjfzRR74arsAUhw
 <br>
-Bearer token hay gọi là Bearer authentication chính là token authentication. Là một HTTP authentication scheme liên quan đến các token bảo mật thì nó gọi là bearer tokens.
+Bearer token hay gọi là Bearer authentication chính là token authentication. Là một HTTP authentication scheme liên quan đến các token bảo mật.
 <br />
 <table>
     <tr>
