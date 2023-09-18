@@ -583,7 +583,7 @@ Header:
 - Key: <code>Authorization</code>
 - Value: <code>Bearer</code> eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTY5NTAwOTA2MCwiZXhwIjoxNjk1MDI3MDYwfQ.qxHkYWVaqyYyyb7ruhYCUx1vNcis3PREA-paLPgaAAhbPskAjiGKt9HTVXXIorhPItUmzAzLjfzRR74arsAUhw
 <br>
-
+Bearer token hay gọi là Bearer authentication chính là token authentication. Là một HTTP authentication scheme liên quan đến các token bảo mật thì nó gọi là bearer tokens.
 ```markdown
 | Key | Value |
 |----------|----------|
@@ -614,4 +614,24 @@ Kết quả:
     "email": "username4@gmail.com"
   }
 ]
+```
+
+## Test chức năng lấy tên người đăng nhập
+Địa chỉ: http://localhost:8081/home/current-user
+<br>
+Phương thức: <code>GET</code>
+<br>
+Header:
+- Key: <code>Authorization</code>
+- Value: <code>Bearer</code> eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTY5NTAwOTA2MCwiZXhwIjoxNjk1MDI3MDYwfQ.qxHkYWVaqyYyyb7ruhYCUx1vNcis3PREA-paLPgaAAhbPskAjiGKt9HTVXXIorhPItUmzAzLjfzRR74arsAUhw
+<br>
+```markdown
+| Key | Value |
+|----------|----------|
+|Authorization|Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTY5NTAwOTA2MCwiZXhwIjoxNjk1MDI3MDYwfQ.qxHkYWVaqyYyyb7ruhYCUx1vNcis3PREA-paLPgaAAhbPskAjiGKt9HTVXXIorhPItUmzAzLjfzRR74arsAUhw|
+
+```
+Kết quả:
+```text
+admin
 ```
