@@ -333,8 +333,9 @@ Lớp này xử lý 5 yêu cầu quan trọng
 - Nhận tên người dùng từ Token
 - Tải người dùng được liên kết từ Token
 - Cài đặt xác thực
-<br>
+
 Tạo file <code>.../security/JwtAuthenticationFilter.java</code>:
+<br>
 
 ```java
 package com.jwt.example.JWTExample.security;
