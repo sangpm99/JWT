@@ -17,7 +17,7 @@ public class HomeController {
     @Autowired
     private UserService userService;
 
-    // http://localhost:8080/home/users
+    // http://localhost:8081/home/users
     @RequestMapping("/users")
     public List<User> getUser() {
         System.out.println("getting users");
