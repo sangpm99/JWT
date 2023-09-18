@@ -585,25 +585,16 @@ Header:
 <br>
 Bearer token hay gọi là Bearer authentication chính là token authentication. Là một HTTP authentication scheme liên quan đến các token bảo mật thì nó gọi là bearer tokens.
 <br />
-```html
 <table>
     <tr>
-        <th>Header 1</th>
-        <th>Header 2</th>
-        <th>Header 3</th>
+        <th>Key</th>
+        <th>Value</th>
     </tr>
     <tr>
-        <td>Dữ liệu 1</td>
-        <td>Dữ liệu 2</td>
-        <td>Dữ liệu 3</td>
-    </tr>
-    <tr>
-        <td>Dữ liệu 4</td>
-        <td>Dữ liệu 5</td>
-        <td>Dữ liệu 6</td>
+        <td>Authorization</td>
+        <td>Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTY5NTAwOTA2MCwiZXhwIjoxNjk1MDI3MDYwfQ.qxHkYWVaqyYyyb7ruhYCUx1vNcis3PREA-paLPgaAAhbPskAjiGKt9HTVXXIorhPItUmzAzLjfzRR74arsAUhw</td>
     </tr>
 </table>
-```
 
 Kết quả:
 ```json
@@ -640,11 +631,18 @@ Header:
 - Key: <code>Authorization</code>
 - Value: <code>Bearer</code> eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTY5NTAwOTA2MCwiZXhwIjoxNjk1MDI3MDYwfQ.qxHkYWVaqyYyyb7ruhYCUx1vNcis3PREA-paLPgaAAhbPskAjiGKt9HTVXXIorhPItUmzAzLjfzRR74arsAUhw
 <br>
-```markdown
-| Key | Value |
-|----------|----------|
-|Authorization|Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTY5NTAwOTA2MCwiZXhwIjoxNjk1MDI3MDYwfQ.qxHkYWVaqyYyyb7ruhYCUx1vNcis3PREA-paLPgaAAhbPskAjiGKt9HTVXXIorhPItUmzAzLjfzRR74arsAUhw|
-```
+
+<table>
+    <tr>
+        <th>Key</th>
+        <th>Value</th>
+    </tr>
+    <tr>
+        <td>Authorization</td>
+        <td>Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTY5NTAwOTA2MCwiZXhwIjoxNjk1MDI3MDYwfQ.qxHkYWVaqyYyyb7ruhYCUx1vNcis3PREA-paLPgaAAhbPskAjiGKt9HTVXXIorhPItUmzAzLjfzRR74arsAUhw</td>
+    </tr>
+</table>
+
 Kết quả:
 ```text
 admin
